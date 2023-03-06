@@ -33,7 +33,6 @@ jobs:
       
       - name: Install dependencies
         run: |
-          install.packages("bookdown", dependencies = TRUE)
           install.packages("renv")
           renv::restore()
         shell: Rscript {0}
@@ -41,12 +40,10 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Cache bookdown results
-        uses: actions/cache@v3
+      - name: Render Quarto Project
+        uses: quarto-dev/quarto-actions/render@v2
         with:
           path: ./book/
-          key: bookdown-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
