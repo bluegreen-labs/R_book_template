@@ -44,7 +44,7 @@ jobs:
       - name: Cache bookdown results
         uses: actions/cache@v3
         with:
-          path: /book/
+          path: ./book/
           key: bookdown-${{ hashFiles('**/*Rmd') }}
           restore-keys: bookdown-
 
