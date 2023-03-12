@@ -23,6 +23,10 @@ await globalThis.webR.installPackages(['ggplot2'])
 </script>
 </html>
 
+
+```{r}
+```
+
 ### Basic expressions
 
 An expression is a set of commands that returns a value. For example let's use R to convert a mass of 50 kg into pounds by multiplying it by 2.2.
