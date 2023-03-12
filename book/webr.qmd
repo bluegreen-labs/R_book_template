@@ -20,15 +20,14 @@ filters:
 //        await globalThis.webR.installPackages(['ggplot2'])
 //  }
 //);
-
-import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';  
+//import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';  
 //globalThis.webR = new WebR({
 //            SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
 //});
-globalThis.webR = new WebR();
-await globalThis.webR.init(); 
-globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
-await globalThis.webR.installPackages(['ggplot2'])
+//globalThis.webR = new WebR();
+//await globalThis.webR.init(); 
+//globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
+//await globalThis.webR.installPackages(['ggplot2'])
 
 </script>
 </html>
@@ -38,7 +37,7 @@ await globalThis.webR.installPackages(['ggplot2'])
 
 ### Basic expressions
 
-An expression is a set of commands that returns a value. For example let's use R to convert a mass of 50 kg into pounds by multiplying it by 2.2.
+An expression is a set of commands that returns a value.
 
 Click `Run Code` to run the following R code.
 
@@ -46,8 +45,6 @@ Click `Run Code` to run the following R code.
 50 * 2.2
 ```
 
-
 ```{webr}
-library(ggplot2)
-ggplot(data = mtcars, mapping = aes(x = mpg, y = hp))
+head(mtcars)
 ```
