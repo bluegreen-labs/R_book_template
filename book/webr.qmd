@@ -10,19 +10,30 @@ filters:
 <html>
 <script type="module">
 
-//=== WebR setup ===
+//import('https://webr.r-wasm.org/latest/webr.mjs').then(
+//    async ({ WebR }) => {
+//        globalThis.webR = new WebR({
+//            SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
+//        });
+//        await globalThis.webR.init();
+//        globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
+//        await globalThis.webR.installPackages(['ggplot2'])
+//  }
+//);
 
-import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';
 globalThis.webR = new WebR({
             SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
 });
+
+//import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';
+
+globalThis.webR = new WebR();
 await globalThis.webR.init(); 
 globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
 await globalThis.webR.installPackages(['ggplot2'])
 
 </script>
 </html>
-
 
 ```{r}
 ```
@@ -37,29 +48,8 @@ Click `Run Code` to run the following R code.
 50 * 2.2
 ```
 
-### Basic plotting
-
-* Load the package and some data
 
 ```{webr}
 library(ggplot2)
-```
-
-* To build a plot using `ggplot` we start with the `ggplot()` function
-
-```{webr}
-ggplot()
-```
-
-* `ggplot()` creates a base ggplot object that we can then add things to - like a blank canvas
-* We can also add optional arguments for information to be shared across different components of the plot
-* The two main arguments we typically use here are 
-* `data` - which is the name of the data frame we are working with, so `acacia`
-* `mapping` - which describes which columns of the data are used for different aspects of the plot
-* We create a `mapping` by using the `aes` function, which stands for "aesthetic", and then linking columns to pieces of the plot
-* We'll start with telling ggplot what value should be on the x and y axes
-* Let's plot the relationship betwen the circumference of an acacia and its height
-
-```{webr}
 ggplot(data = mtcars, mapping = aes(x = mpg, y = hp))
 ```
