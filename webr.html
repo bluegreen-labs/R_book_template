@@ -90,7 +90,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <meta name="twitter:title" content="Book Title - 2&nbsp; Basic R">
-<meta name="twitter:description" content="An expression is a set of commands that returns a value. For example let’s use R to convert a mass of 50 kg into pounds by multiplying it by 2.2.">
+<meta name="twitter:description" content="An expression is a set of commands that returns a value.">
 <meta name="twitter:card" content="summary">
 </head>
 
@@ -235,15 +235,14 @@ ul.task-list li input[type="checkbox"] {
 //        await globalThis.webR.installPackages(['ggplot2'])
 //  }
 //);
-
-import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';  
+//import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs';  
 //globalThis.webR = new WebR({
 //            SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
 //});
-globalThis.webR = new WebR();
-await globalThis.webR.init(); 
-globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
-await globalThis.webR.installPackages(['ggplot2'])
+//globalThis.webR = new WebR();
+//await globalThis.webR.init(); 
+//globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
+//await globalThis.webR.installPackages(['ggplot2'])
 
 </script>
 
@@ -252,7 +251,7 @@ await globalThis.webR.installPackages(['ggplot2'])
 </div>
 <section id="basic-expressions" class="level3" data-number="2.0.1">
 <h3 data-number="2.0.1" class="anchored" data-anchor-id="basic-expressions"><span class="header-section-number">2.0.1</span> Basic expressions</h3>
-<p>An expression is a set of commands that returns a value. For example let’s use R to convert a mass of 50 kg into pounds by multiplying it by 2.2.</p>
+<p>An expression is a set of commands that returns a value.</p>
 <p>Click <code>Run Code</code> to run the following R code.</p>
 <div class="cell">
 <button class="btn btn-default btn-webr" disabled="" type="button" id="webr-run-button-1">Loading webR...</button>
@@ -345,8 +344,7 @@ await globalThis.webR.installPackages(['ggplot2'])
     elt.style.height = "auto";
     editorDiv.append(elt);
   },{
-    value: `library(ggplot2)
-ggplot(data = mtcars, mapping = aes(x = mpg, y = hp))`,
+    value: `head(mtcars)`,
     lineNumbers: true,
     mode: "r",
     theme: "light default",
