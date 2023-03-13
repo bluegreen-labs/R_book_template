@@ -1,5 +1,5 @@
 ---
-title: ggplot
+title: "ggplot demo"
 editor: visual
 engine: knitr
 filters:

@@ -45,6 +45,6 @@ Your result should look like the plot below
 
 ```{r}
 #| echo: false
-tails(mtcars)
+tail(mtcars)
 ```
 :::
