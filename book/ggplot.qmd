@@ -12,7 +12,7 @@ filters:
 import('https://webr.r-wasm.org/latest/webr.mjs').then(
     async ({ WebR }) => {
         globalThis.webR = new WebR({
-            SW_URL: "/"
+            SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
         });
         //globalThis.webR = new WebR();
         await globalThis.webR.init();
