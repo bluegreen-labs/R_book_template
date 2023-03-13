@@ -12,7 +12,8 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - webr.qmd
+    - basicr.qmd
+    - ggplot.qmd
     - references.qmd
   favicon: "figures/favicon.ico"
   twitter-card: true

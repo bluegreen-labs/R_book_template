@@ -1,8 +1,7 @@
 ---
-title: "Basic R"
-format:
-  html:
-    include-in-header: header.html
+title: ggplot
+editor: visual
+engine: knitr
 filters:
   - webr
 ---
@@ -13,7 +12,7 @@ filters:
 import('https://webr.r-wasm.org/latest/webr.mjs').then(
     async ({ WebR }) => {
         globalThis.webR = new WebR({
-            SW_URL: "https://bluegreen-labs.github.io/R_book_template/"
+            SW_URL: "/"
         });
         //globalThis.webR = new WebR();
         await globalThis.webR.init();
@@ -24,23 +23,6 @@ import('https://webr.r-wasm.org/latest/webr.mjs').then(
 
 </script>
 </html>
-
-```{r}
-```
-
-### Basic expressions
-
-An expression is a set of commands that returns a value.
-
-Click `Run Code` to run the following R code.
-
-```{webr}
-50 * 2.2
-```
-
-```{webr}
-head(mtcars)
-```
 
 ### Basic plotting
 
