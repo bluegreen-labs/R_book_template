@@ -24,6 +24,10 @@ import('https://webr.r-wasm.org/latest/webr.mjs').then(
 </script>
 </html>
 
+::: {.callout-warning}
+Installing and loading ggplot2 on webR takes a little while.
+:::
+
 ### Basic plotting
 
 * Load the package and some data
