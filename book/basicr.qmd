@@ -1,8 +1,6 @@
 ---
 title: "Basic R"
-format:
-  html:
-    include-in-header: header.html
+format: html
 filters:
   - webr
 ---
