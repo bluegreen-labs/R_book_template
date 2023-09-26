@@ -1,8 +1,10 @@
 project:
   type: book
   output-dir: _book
-  post-render:
-    - add-extra-files.R
+  resources:
+    - webr-serviceworker.js
+    - webr-worker.js
+    - _headers
 
 book:
   title: "Book Title"

@@ -2,21 +2,11 @@
 title: "ggplot demo"
 editor: visual
 engine: knitr
+webr:
+  - packages: ['ggplot2']
 filters:
   - webr
 ---
-
-<html>
-<script type="module">
-
-import { WebR } from 'https://webr.r-wasm.org/latest/webr.mjs'; 
-globalThis.webR = new WebR({SW_URL: "https://bluegreen-labs.github.io/R_book_template/"}); 
-await globalThis.webR.init(); 
-globalThis.webRCodeShelter = await new globalThis.webR.Shelter();
-await globalThis.webR.installPackages(['ggplot2'])
-
-</script>
-</html>
 
 ::: {.callout-warning}
 Installing and loading ggplot2 on webR takes a little while.
@@ -26,13 +16,13 @@ Installing and loading ggplot2 on webR takes a little while.
 
 * Load the package and some data
 
-```{webr}
+```{webr-r}
 library(ggplot2)
 ```
 
 * create a plot 
 
-```{webr}
+```{webr-r}
 ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +
   geom_point()
 ```
@@ -44,7 +34,7 @@ ggplot(data = mtcars, mapping = aes(x = mpg, y = hp)) +
 Make a scatter plot with `hp` on the x axis and `wt` on the y axis. Label the x axis "Horse Power" and the y axis “Weight”.
 Make one subplot for each value in `gear`.
 
-```{webr}
+```{webr-r}
 # Add you code here
 ```
 
