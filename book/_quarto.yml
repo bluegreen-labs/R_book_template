@@ -21,7 +21,7 @@ book:
   twitter-card: true
   search: true
   repo-url: https://github.com/bluegreen-labs/R_book_template/
-  sharing: [twitter, facebook]
+  sharing: [linkedin]
   navbar:
     title: ""
     logo: "https://bluegreenlabs.org/img/logo_text_small.png"
